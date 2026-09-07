@@ -1,4 +1,4 @@
-# Clayey Soil ANN Prediction — Upgraded Research Version
+# Clayey Soil ANN Prediction
 
 This Streamlit application provides a research-oriented ANN workflow for clayey-soil engineering-property prediction.
 
