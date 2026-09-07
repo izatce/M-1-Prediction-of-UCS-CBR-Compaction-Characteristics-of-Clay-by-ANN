@@ -858,7 +858,7 @@ with t8:
                         features = ", ".join(trained["features"])
                         prompt = f"""You are assisting with academic geotechnical engineering research.\nTarget property: {trained['target']}.\nInput features: {features}.\nSelected ANN architecture: {trained['architecture']}.\nArchitecture selection used 5-fold cross-validation within the 80% development set. A separate 20% holdout was not used during model selection.\nTesting metrics from {source_name}: R2={m['R²']:.4f}, RMSE={m['RMSE']:.4f}, MAE={m['MAE']:.4f}, MAPE={m['MAPE (%)']:.2f}%.\nProvide a concise academic interpretation of model performance, limitations, and engineering meaning. Do not generate or alter numerical predictions. State clearly that the ANN generated the numerical predictions and Gemini only provides textual interpretation."""
                         client = genai.Client(api_key=key)
-                        response = client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
+                        response = client.models.generate_content(model="gemini-3.5-flash", contents=prompt)
                         st.session_state.gemini_text = response.text
                     except Exception as e:
                         st.error(f"Gemini error: {e}")
